@@ -5,27 +5,28 @@ int average(vector<vector<int>> array)
 {
 	int total = 0;
 	int average = array[0][0];
-	for (int a = 0; a < 4; a++)
+	for (int i = 0; a < array.size(); a++)
 	{
-		for (int b = 0; b < 3; b++)
+		for (int j = 0; b < array[i].size(); b++)
 		{
-			total += array[a][b];
+			total += array[i][j];
 		}
-		average = total / 12;
+		
 	}
+	average = total / (array.size()*array[i].size());
 	return average;
 }
 int main()
 {
 	vector<vector<int>> array(4);
-	for (int a = 0; a < 4; a++)
+	for (int a = 0; a < array.size(); a++)
 		array[a] = vector<int>(3);
 
-	for (int a = 0; a < 4; a++)
+	for (int i = 0; a < array.size(); a++)
 	{
-		for (int b = 0; b < 3; b++)
+		for (int j = 0; b < array[i].size(); b++)
 		{
-			cin >> array[a][b];
+			cin >> array[i][j];
 		}
 	}
 
